@@ -3,6 +3,7 @@ title: "Homework 1"
 author: "Mason Wong"
 date: "2022-10-01"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -107,7 +108,7 @@ cty and hwy have a positive correlation, as well as cyl and disp. On the other s
 
 ```{r}
 library(ggthemes)
-ggplot(mpg, aes(hwy, class)) + geom_boxplot() + geom_jitter(width = 0, height = 0.4, color = "darkgrey") + scale_color_grey() + labs(x = "Highway MPG") + theme_gdocs()
+ggplot(mpg, aes(hwy, class)) + geom_boxplot() + geom_jitter(width = 0, height = 0.4, color = "darkgrey") + scale_color_grey() + labs(x = "Highway MPG", y = "Vehicle Class") + theme_gdocs()
 ```
 From my understanding, these points move every time I rerun the code so this is the closest I could get
 
